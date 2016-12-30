@@ -1,1 +1,33 @@
-{"name":"new","main":"","git":"https://github.com/tobihrbr/new.git","version":"1.0.0","description":"","keywords":"","license":"MIT","author":""}
+{
+  "name": "new-package",
+  "main": "index.js",
+  "git": "https://github.com/tobihrbr/new.git",
+  "version": "0.0.1",
+  "description": "![new-package](https://cldup.com/VveGuN1HEP.png)",
+  "keywords": [],
+  "license": "MIT",
+  "author": "",
+  "bin": {
+    "new-package": "new.js"
+  },
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "ini": "^1.3.4",
+    "minimist": "^1.2.0",
+    "mkdirp": "^0.5.1",
+    "prompt": "^1.0.0",
+    "then-sleep": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tobihrbr/new.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tobihrbr/new/issues"
+  },
+  "homepage": "https://github.com/tobihrbr/new#readme"
+}

@@ -86,7 +86,7 @@ sleep(15).then(function () {
         default: main,
         type: 'string'
       },
-      git: {
+      repository: {
         default: git,
         type: 'string'
       },
