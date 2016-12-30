@@ -120,6 +120,30 @@ sleep(15).then(function () {
         result.keywords = result.keywords.split(" ");
       }
 
+      if (result.repository !== '') {
+        const repo = {
+          url: result.repository,
+          type: 'git'
+        }
+
+        result.repository = repo;
+      }
+
+      if (result.main !== '') {
+        if (!fs.existsSync(path.join(workDir, result.main))) {
+          fs.writeFile(path.join(workDir, result.main), '', (err) => {
+            if (err) throw err;
+            console.log(chalk.green('Generated ' + result.main));
+          });
+        }
+
+        const scripts = {
+          start: 'node ' + result.main
+        }
+
+        result.scripts = scripts;
+      }
+
       // Write generated `package.json` file
       fs.writeFile(path.join(workDir, 'package.json'), JSON.stringify(result, '\n\t'), (err) => {
         if (err) throw err;
