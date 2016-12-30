@@ -1,1 +1,0 @@
-{"name":"home","main":"test.js","repository":{"url":"https://github.com/tobihrbr/first.css","type":"git"},"version":"0.0.1","description":"none","keywords":["none"],"license":"MIT","author":"me","scripts":{"start":"node test.js"}}
