@@ -8,6 +8,7 @@ const argv = require('minimist')(process.argv.slice(2));
 const sleep = require('then-sleep');
 const prompt = require('prompt');
 const chalk = require('chalk');
+const clean = require('cleanr');
 
 /*
 Set custom properties for `prompt`
@@ -131,10 +132,20 @@ sleep(15).then(function () {
 
       if (result.main !== '') {
         if (!fs.existsSync(path.join(workDir, result.main))) {
-          fs.writeFile(path.join(workDir, result.main), '', (err) => {
-            if (err) throw err;
-            console.log(chalk.green('Generated ' + result.main));
-          });
+          if (fs.existsSync(path.dirname(path.join(workDir, result.main)))) {
+            fs.writeFile(path.join(workDir, result.main), '', (err) => {
+              if (err) throw err;
+              console.log(chalk.green('Generated ' + result.main));
+            });
+          } else {
+            mkdirp(path.dirname(path.join(workDir, result.main)), function (err) {
+              if (err) throw err;
+              fs.writeFile(path.join(workDir, result.main), '', (err) => {
+                if (err) throw err;
+                console.log(chalk.green('Generated ' + result.main));
+              });
+            });
+          }
         }
 
         const scripts = {
@@ -143,6 +154,9 @@ sleep(15).then(function () {
 
         result.scripts = scripts;
       }
+
+      // remove unused params
+      result = clean(result);
 
       // Write generated `package.json` file
       fs.writeFile(path.join(workDir, 'package.json'), JSON.stringify(result, '\n\t'), (err) => {
