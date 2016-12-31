@@ -1,12 +1,13 @@
 ![new-package](https://cldup.com/VveGuN1HEP.png)
 
-## Installation: 
+## Installation:
 > You must have [node.js](https://nodejs.org) installed to be able to use npm.
+
 ```bash
 npm install -g new-package
 ```
 
-## Usage 
+## Usage
 ```bash
 new
 ```
@@ -17,5 +18,5 @@ you can also specify a different directory ```new my-project```.
 
 DONE!😉
 
-## License 
+## License
 MIT
