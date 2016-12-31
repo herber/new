@@ -7,6 +7,10 @@
   },
   "version": "0.1.0",
   "description": "An alternative to `npm init` ",
+  "bin": {
+    "new": "./bin/new.js",
+    "new-package": "./bin/new.js"
+  },
   "keywords": [
     "npm",
     "init",
