@@ -12,7 +12,7 @@ npm install -g new-package
 new
 ```
 
-you can also specify a different directory ```new my-project```.
+You can also specify a different directory ```new my-project```.
 
 **new-package** will ask you for all the necessary information and fill in all the information it can automatically generate.
 
