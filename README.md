@@ -1,5 +1,7 @@
 ![new-package](https://cldup.com/VveGuN1HEP.png)
 
+> Like `npm init` but better
+
 ## Installation:
 > You must have [node.js](https://nodejs.org) installed to be able to use npm.
 
