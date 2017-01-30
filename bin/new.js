@@ -173,6 +173,6 @@ If user stops
 */
 process.on('exit', function() {
   if (!done) {
-    console.log(chalk.red('\n\n  Aborted'));
+    console.log(chalk.red('\n\nAborted'));
   }
 });
