@@ -16,7 +16,7 @@ new
 
 You can also specify a different directory ```new my-project```.
 
-**New-package** will ask you for all the necessary information and fill in all the information it can automatically generate.
+**New-package** will ask you for all the necessary information and fill in all the information it can automatically generate(e.g. git repo).
 
 DONE! 🎉
 
